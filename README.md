@@ -12,9 +12,11 @@ Możemy wyróżnić kilka podstawowych rodzajów ataku SQLi:
     - Error based
     - Union based
  - Inferential (Blind) SQLi
-    - Boolen based
+    - Boolean based
     - Time based
 - Out-of-band SQLi
+
+![asd](Utilities/SQLi-attack-types.png)
 
 ## In-band SQLi
 In-band SQL injection możemy rozróżnić na dwia typy ataków:
