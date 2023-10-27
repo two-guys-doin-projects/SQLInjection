@@ -27,13 +27,13 @@ In-band SQL injection możemy rozróżnić na dwia typy ataków:
 
 ## Inferential (Blind) SQLi
 
-- ***Boolen based*** - polaga na wstrzyknięciu i modyfikacji zapytania w taki sposób, aby zwróciła wartość TRUE albo FALSE.
+- ***Boolen based*** - polega na wstrzyknięciu i modyfikacji zapytania w taki sposób, aby baza danych zwróciła wartość TRUE albo FALSE.
 
-- ***Time based*** - polega na wysłąniu zapytania do bazy oraz wymuszonego oczekiwania pewniego przedziału czasu na reakcję bazy. Na podstawie potrzebnego czasu na odpowiedź z bazy atakujący może stwierdzić czy zapytanie jest prawdziwe lub fałszywe.
+- ***Time based*** - polega na wysłaniu zapytania do bazy oraz wymuszonego oczekiwania pewniego przedziału czasu na reakcję bazy. Na podstawie czasu potrzebnego na odpowiedź z bazy atakujący może stwierdzić czy zapytanie jest prawdziwe lub fałszywe.
 
 ## Out-of-band SQLi
 
-Przeprowadzenie tego typu ataku wymaga spełnienia pewnych kryteriów(takich jak działanie pewnych funkcji bazy danych). Jest alternatywą do poprzednich ataków stosowaną, gdy serwer jest zbyt wolny lub niestabilny oraz opiera się na zdolności tworzenia żądań DNS lub HTTP w celu przesłania danych.
+Przeprowadzenie tego typu ataku wymaga spełnienia pewnych kryteriów(takich jak działanie pewnych funkcji bazy danych). Jest alternatywą do poprzednich ataków stosowaną, gdy serwer jest zbyt wolny lub niestabilny. Opiera się na zdolności tworzenia żądań DNS lub HTTP w celu przesłania danych.
 
 # Podatność na atak
 
