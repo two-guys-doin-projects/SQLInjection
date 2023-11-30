@@ -19,7 +19,9 @@
         //search request handling
         $results = null;
         if($_POST){
-            $results = $database->query("SELECT productName from products");
+            $query = "SELECT productName from products WHERE productName LIKE '%".$_POST['searchbar']."%';";
+            echo $query;
+            $results = mysqli_multi_query($database, $query);
         }
     ?>
     <div class="container">
@@ -31,6 +33,18 @@
             </div>
         </div>
     </form>
+    <div class="card"> 
+        <?php
+            do{
+                if($result = mysqli_store_result($database)){
+                    while($row = mysqli_fetch_row($result)){
+                        echo '<div class="card"><b>'.reset($row).'</b></div>';
+                    }
+                }
+            }while(mysqli_next_result($database))
+        ?>
+
+    </div>
     </div>
 </body>
 </HTML>
