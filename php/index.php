@@ -20,7 +20,6 @@
         $results = null;
         if($_POST){
             $query = "SELECT productName from products WHERE productName LIKE '%".$_POST['searchbar']."%';";
-            echo $query;
             $results = mysqli_multi_query($database, $query);
         }
     ?>
