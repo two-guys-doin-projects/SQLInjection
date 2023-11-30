@@ -22,15 +22,17 @@ Możemy wyróżnić kilka podstawowych rodzajów ataku SQLi:
 In-band SQL injection możemy rozróżnić na dwia typy ataków:
 
 - ***Error based*** - atakujący swoim atakiem prowadzi do wyprodukowania wiadomości błędu przez bazę danych, informacje wyświetlone w wiadomości mogą posłużyć do dalszych ataków ze względu na potencjalne odsłonięcie informacji o strukturze bazy.
-
+![img.png](Utilities/error_based_1.png)
+![img_1.png](Utilities/error_based_2.png)
 - ***Union based*** - w przypadku tego typu ataków wykorzystuje się słabość operatora UNION, który łączy ze sobą wyniki kilku zapytań w jeden wynik.
 ![img.png](Utilities/img.png)
 ## Inferential (Blind) SQLi
 
 - ***Boolen based*** - polega na wstrzyknięciu i modyfikacji zapytania w taki sposób, aby baza danych zwróciła wartość TRUE albo FALSE.
-
+![img.png](Utilities/boolen_1.png)
+![img.png](Utilities/boolen_2.png)
 - ***Time based*** - polega na wysłaniu zapytania do bazy oraz wymuszonego oczekiwania pewniego przedziału czasu na reakcję bazy. Na podstawie czasu potrzebnego na odpowiedź z bazy atakujący może stwierdzić czy zapytanie jest prawdziwe lub fałszywe.
-
+![img.png](Utilities/sleep.png)
 ## Out-of-band SQLi
 
 Przeprowadzenie tego typu ataku wymaga spełnienia pewnych kryteriów(takich jak działanie pewnych funkcji bazy danych). Jest alternatywą do poprzednich ataków stosowaną, gdy serwer jest zbyt wolny lub niestabilny. Opiera się na zdolności tworzenia żądań DNS lub HTTP w celu przesłania danych.
