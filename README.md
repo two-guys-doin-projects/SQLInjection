@@ -44,3 +44,12 @@ Na atak typu SQL Injection podatne są usługi, które udostępniają użytkowni
 # Potencjalne ryzyko dla ofiary ataku
 
 Baza danych jest kluczowym elementem większości aplikacji internetowych oraz głównym sposobem przechowywania trwałych informacji. Możliwość swobodnego wykonywania zapytań SQL może zapewnić atakującemu dostęp do wszystkich informacji w bazie danych w zależności od uprawnień konta, za pomocą którego serwer łączy się z nią.
+
+# Uruchomienie
+Wystarczy uruchomić compose Dockera, wtedy nasz obraz zostanie pobrany z ogólnodostępnego repozytorium i uruchomiony.
+```console
+sudo docker compose up
+```
+Strona projektu jest dostępna pod adresem: ***localhost:41062***,
+
+Lub za pomocą ssh: ***port 41061***
