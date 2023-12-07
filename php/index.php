@@ -9,7 +9,7 @@
     <?php
         //define SQL connection params
 
-        $sql_server_address = 'localhost';
+        $sql_server_address = '172.17.0.2';
         $sql_username = 'flip';
         $sql_password = 'flip';
         $sql_shop_dbname = 'classicmodels';
