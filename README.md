@@ -42,7 +42,7 @@ Kwerenda: '
 ![img.png](Utilities/error_based_1.png)
 ![img_1.png](Utilities/error_based_2.png)
 
-Iterpretacja wyniku: W tym przypadku to co oczekujemy od naszego ataku jest uzyskanie informacji na temat
+Interpretacja wyniku: W tym przypadku to co oczekujemy od naszego ataku jest uzyskanie informacji na temat
 struktury atakowanej bazy np. typ bazymysql(), gdzie dokłądnie wystąpił błąd, gdzie znajdują się
 atakowane pliki
 
