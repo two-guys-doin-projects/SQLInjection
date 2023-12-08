@@ -8,6 +8,7 @@ bazy danych MariaDB i interpretowanie skryptów w języku PHP.
 Do wykonania ataków napisaliśmy prostą stronę z wykorzystaniem języka PHP która pozwala nam na wykonywanie
 zapytań do naszej bazy. Sama strona jest bardzo prosta, ponieważ nawiera tylko pole wyszukiwarki co umożliwia 
 na proste wykonanie ataku tylu SQL injection.
+![img.png](Utilities/site.png)
 Sama truktura bazy wygląda następująco:
 
 ![img.png](Utilities/database_ER_diagram.png)
@@ -40,6 +41,11 @@ Kwerenda: '
 ```
 ![img.png](Utilities/error_based_1.png)
 ![img_1.png](Utilities/error_based_2.png)
+
+Iterpretacja wyniku: W tym przypadku to co oczekujemy od naszego ataku jest uzyskanie informacji na temat
+struktury atakowanej bazy np. typ bazymysql(), gdzie dokłądnie wystąpił błąd, gdzie znajdują się
+atakowane pliki
+
 ### Przykładowe składnie Error based:
 ```
  ' 
@@ -53,7 +59,14 @@ Kwerenda: '
  ORDER BY 31337#
 ```
 - ***Union based*** - w przypadku tego typu ataków wykorzystuje się słabość operatora UNION, który łączy ze sobą wyniki kilku zapytań w jeden wynik.
-![img.png](Utilities/img.png)
+```
+Kwerenda: ';SHOW TABLES; SELECT "" FROM DUAL WHERE 'string' LIKE '
+```
+- ![img.png](Utilities/img.png)
+
+Iterpretacja wyniku: W tym przypadku ważne jest dla nas uzyskanie danych których normalnie nie wyświetliło by zapytanie
+lecz dzięki wykonaniu dwóch zapytań na raz jesteśmy w stanie wyciągnąć z bazy interesujące nas informacje w tym przypadku
+truktórę tabel.
 
 ### Przykładowe składnie Union based:
 ```
@@ -65,8 +78,13 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2
 ## Inferential (Blind) SQLi
 
 - ***Boolen based*** - polega na wstrzyknięciu i modyfikacji zapytania w taki sposób, aby baza danych zwróciła wartość TRUE albo FALSE.
+```
+Kwerenda: FORD%' and 'a%' = 'a
+```
 ![img.png](Utilities/boolen_1.png)
 ![img.png](Utilities/boolen_2.png)
+
+Iterpretacja wyniku: Iteresuje nas tu wyciągnięce danych z bazy których normalnie zapytanie by nie zwróciło
 
 ### Przykładowe składnie Boolen based:
 ```
@@ -77,7 +95,13 @@ WHERE username = '[username]' AND password = '' OR 1=1'
 or 'a'='b' --
 ```
 - ***Time based*** - polega na wysłaniu zapytania do bazy oraz wymuszonego oczekiwania pewniego przedziału czasu na reakcję bazy. Na podstawie czasu potrzebnego na odpowiedź z bazy atakujący może stwierdzić czy zapytanie jest prawdziwe lub fałszywe.
+```
+Kwerenda: Ford%; SELECT SLEEP(4); SELECT "waited" FROM DUAL WHERE 'a%' = 'a
+```
 ![img.png](Utilities/sleep.png)
+
+Iterpretacja wyniku: W tym przypadku operujemy na czasie jakim ma poczekać baza na zwróceniu zapytania, co przekłada się na wynik naszego zapytania który może być prawdziwy lub fałszywy
+
 ### Przykładowe składnie Time based:
 ```
 WAITFOR DELAY '0:0:30'--
