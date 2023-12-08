@@ -86,7 +86,7 @@ Kwerenda: FORD%' and 'a%' = 'a
 
 Iterpretacja wyniku: Iteresuje nas tu wyciągnięce danych z bazy których normalnie zapytanie by nie zwróciło
 
-### Przykładowe składnie Boolen based:
+### Przykładowe składnie Boolean based:
 ```
 WHERE ID = 2 and 1=2
 WHERE ID = 2 and 1=1
