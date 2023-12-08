@@ -9,7 +9,7 @@ Do wykonania ataków napisaliśmy prostą stronę z wykorzystaniem języka PHP k
 zapytań do naszej bazy. Sama strona jest bardzo prosta, ponieważ zawiera tylko pole wyszukiwarki co umożliwia 
 na proste wykonanie ataku stylu SQL injection.
 ![img.png](Utilities/site.png)
-Sama truktura bazy wygląda następująco:
+Sama struktura bazy wygląda następująco:
 
 ![img.png](Utilities/database_ER_diagram.png)
 
