@@ -1,6 +1,17 @@
 # Wstęp
 
-Niniejsze sprawozdanie jest raportem będącym wynikiem badań nad atakami typu **SQL Injection**.
+Niniejsze sprawozdanie jest raportem będącym wynikiem badań nad atakami typu **SQL Injection**, przeprowadzonego
+w ramach projektu na przedmiod Projektowanie systemów bezpieczeństwa. Zdecydowaliśmy się wykonać
+cały projekt z wykorzystaniem oprogramowania XAMPP które umożliwia nam postawienie serwera apache,
+bazy danych MariaDB i interpretowanie skryptów w języku PHP.
+
+Do wykonania ataków napisaliśmy prostą stronę z wykorzystaniem języka PHP która pozwala nam na wykonywanie
+zapytań do naszej bazy. Sama truktura bazy wygląda następująco:
+
+![img.png](Utilities/database_ER_diagram.png)
+
+Całość projektu zdecydowaliśmy się skonteneryzować z wykorzystaniem Docker'a dla łatwiejszego 
+urochamiania całej aplikacji.
 
 # Opis rodzaju ataku
 
