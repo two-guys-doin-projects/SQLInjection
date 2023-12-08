@@ -7,7 +7,7 @@ bazy danych MariaDB i interpretowanie skryptów w języku PHP.
 
 Do wykonania ataków napisaliśmy prostą stronę z wykorzystaniem języka PHP która pozwala nam na wykonywanie
 zapytań do naszej bazy. Sama strona jest bardzo prosta, ponieważ zawiera tylko pole wyszukiwarki co umożliwia 
-na proste wykonanie ataku tylu SQL injection.
+na proste wykonanie ataku stylu SQL injection.
 ![img.png](Utilities/site.png)
 Sama truktura bazy wygląda następująco:
 
