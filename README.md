@@ -66,7 +66,7 @@ Kwerenda: ';SHOW TABLES; SELECT "" FROM DUAL WHERE 'string' LIKE '
 
 Iterpretacja wyniku: W tym przypadku ważne jest dla nas uzyskanie danych których normalnie nie wyświetliło by zapytanie
 lecz dzięki wykonaniu dwóch zapytań na raz jesteśmy w stanie wyciągnąć z bazy interesujące nas informacje w tym przypadku
-truktórę tabel.
+strukturę tabel.
 
 ### Przykładowe składnie Union based:
 ```
