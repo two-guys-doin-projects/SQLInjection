@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  sqlinjection:
+    image: 'kosiarn/sqlinjection:bruhedition'
+    restart: always
+    ports:
+      - "41061:22"
+      - "41062:80"
+    volumes:
+      - "~/my_web_pages:/www"
+    environment:
+      - MYSQL_ROOT_PASSWORD=flip
