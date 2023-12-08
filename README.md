@@ -6,7 +6,9 @@ cały projekt z wykorzystaniem oprogramowania XAMPP które umożliwia nam postaw
 bazy danych MariaDB i interpretowanie skryptów w języku PHP.
 
 Do wykonania ataków napisaliśmy prostą stronę z wykorzystaniem języka PHP która pozwala nam na wykonywanie
-zapytań do naszej bazy. Sama truktura bazy wygląda następująco:
+zapytań do naszej bazy. Sama strona jest bardzo prosta, ponieważ nawiera tylko pole wyszukiwarki co umożliwia 
+na proste wykonanie ataku tylu SQL injection.
+Sama truktura bazy wygląda następująco:
 
 ![img.png](Utilities/database_ER_diagram.png)
 
@@ -33,6 +35,9 @@ Możemy wyróżnić kilka podstawowych rodzajów ataku SQLi:
 In-band SQL injection możemy rozróżnić na dwia typy ataków:
 
 - ***Error based*** - atakujący swoim atakiem prowadzi do wyprodukowania wiadomości błędu przez bazę danych, informacje wyświetlone w wiadomości mogą posłużyć do dalszych ataków ze względu na potencjalne odsłonięcie informacji o strukturze bazy.
+```
+Kwerenda: '
+```
 ![img.png](Utilities/error_based_1.png)
 ![img_1.png](Utilities/error_based_2.png)
 ### Przykładowe składnie Error based:
